@@ -1,0 +1,183 @@
+@charset "UTF-8";
+
+/* reset 시작 */
+* {
+  color: #333;
+  text-decoration: none;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a:link {
+  color: #444;
+}
+
+a:visited {
+  color: #444;
+}
+
+a:hover {
+  color: #555;
+}
+
+a:active {
+  color: #666;
+}
+
+img {
+  vertical-align: middle;
+}
+
+body {
+  background-color: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+.flexContainer {
+  display: flex;
+}
+
+/* reset 끝 */
+/* Guide Line 시작 */
+div#wrap {
+  border: 1px solid #000;
+}
+
+header#header {
+  border: 1px solid #000;
+}
+
+main#main {
+  border: 1px solid #000;
+}
+
+div#slide {
+  border: 1px solid #000;
+}
+
+div#contents {
+  border: 1px solid #000;
+}
+
+footer#footer {
+  border: 1px solid #000;
+}
+
+/* Guide Line 끝 */
+/* div#wrap 시작 */
+
+div#wrap {
+  width: 1000px;
+  margin: 10px;
+}
+
+/* div#wrap 끝 */
+/* header#header 시작 */
+
+header#header {
+  width: 200px;
+}
+
+/* nav#gnb 시작 */
+
+/* nav#gnb {
+  border: 1px solid #f80;
+} */
+
+#gnb > ul#mainMenu {
+  /* border: 1px solid #08f; */
+  padding: 10px;
+  margin: 10px;
+
+  /* 세로형2열에서만 적용 128번줄과 연계됨*/
+  position: relative;
+}
+
+#gnb > ul#mainMenu > li {
+  text-align: center;
+  /* border: 1px solid #f88; */
+}
+
+#gnb a {
+  font-weight: bold;
+  color: #479da7;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  display: inline-block;
+  border: 1px solid #aaa;
+}
+
+#gnb .mainLi > a {
+  /* 메인메뉴와 서브메뉴 구분 */
+  height: 50px;
+  line-height: 50px;
+  font-size: 17px;
+}
+
+#gnb .mainLi:hover > a {
+  background-color: #479da7bd;
+  color: #fff;
+}
+
+#gnb ul.subMenu {
+  display: none;
+  /* position: relative; 1열에서만 적용*
+  /* 2열일 경우 적용할 소스 */
+  position: absolute;
+  left: 164px;
+  top: 0;
+}
+
+#gnb ul.subMenu li:last-child a {
+  padding-bottom: 160px;
+}
+
+/* 서브메뉴 하이라이트 역상 적용 */
+#gnb .subLi a {
+  background-color: #479da7;
+  color: #fff;
+}
+
+#gnb .subLi a:hover {
+  color: #479da7;
+  background-color: #fff;
+}
+
+/* nav#gnb 끝 */
+/* header#header 끝 */
+/* main#main 시작 */
+
+main#main {
+  flex: 1;
+}
+
+/* div#slide 시작 */
+
+div#slide {
+  height: 350px;
+}
+
+/* div#slide 끝 */
+/* div#contents 시작 */
+
+div#contents {
+  height: 200px;
+}
+
+#main #contents > * {
+  flex: 1;
+  border: 1px solid #000;
+}
+
+#main footer#footer {
+  height: 100px;
+}
+
+/* div#contents 끝 */
+/* main#main 끝 */
