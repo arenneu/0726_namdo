@@ -84,69 +84,70 @@ header#header {
 
 /* nav#gnb 시작 */
 
-/* nav#gnb {
-  border: 1px solid #f80;
-} */
+nav#gnb {
+  border: 1px solid #000;
+  margin: 2px;
+  padding: 3px;
+}
 
-#gnb > ul#mainMenu {
-  /* border: 1px solid #08f; */
+#gnb ul#mainMenu {
   padding: 10px;
-  margin: 10px;
-
-  /* 세로형2열에서만 적용 128번줄과 연계됨*/
+  border: 1px solid #f80;
   position: relative;
 }
 
-#gnb > ul#mainMenu > li {
+#gnb li.mainLi {
+  border: 1px solid #08f;
   text-align: center;
-  /* border: 1px solid #f88; */
 }
 
-#gnb a {
-  font-weight: bold;
-  color: #479da7;
+#gnb a{
+  border: 1px solid #aaa;
+  display: inline-block;
   width: 150px;
   height: 40px;
   line-height: 40px;
-  text-align: center;
-  display: inline-block;
-  border: 1px solid #aaa;
-}
-
-#gnb .mainLi > a {
-  /* 메인메뉴와 서브메뉴 구분 */
-  height: 50px;
-  line-height: 50px;
+  font-weight: bold;
   font-size: 17px;
 }
 
-#gnb .mainLi:hover > a {
-  background-color: #479da7bd;
+#gnb li.mainLi>a{
+  height: 50px;
+  line-height: 50px;
+}
+
+/* gnb 메뉴 하이라이트 효과 시작 */
+
+#gnb li.mainLi:hover > a{
+  /* 메인메뉴 하이라이트 효과 */
+  background-color: #479da7d2;
+  color: #ffddb6;
+}
+
+/* 서브메뉴 하이라이트 효과 */
+#gnb li.subLi a{
+  background-color: #479da7c2;
   color: #fff;
 }
 
-#gnb ul.subMenu {
-  display: none;
-  /* position: relative; 1열에서만 적용*
-  /* 2열일 경우 적용할 소스 */
-  position: absolute;
-  left: 164px;
-  top: 0;
-}
-
-#gnb ul.subMenu li:last-child a {
-  padding-bottom: 160px;
-}
-
-/* 서브메뉴 하이라이트 역상 적용 */
-#gnb .subLi a {
-  background-color: #479da7;
-  color: #fff;
-}
-
-#gnb .subLi a:hover {
-  color: #479da7;
+#gnb li.subLi a:hover{
   background-color: #fff;
+  color: #479da7a8;
+}
+
+/* gnb 메뉴 하이라이트 효과 끝 */
+
+#gnb ul.subMenu{
+  display: none;
+
+  position: absolute;
+  left: 167px;
+  top: 10px;
+  z-index: 1;
+}
+
+#gnb li.subLi:last-child a{
+  padding-bottom: 150px;
 }
 
 /* nav#gnb 끝 */
@@ -155,12 +156,47 @@ header#header {
 
 main#main {
   flex: 1;
+  padding: 0 10px;
 }
 
 /* div#slide 시작 */
 
 div#slide {
+  width: 780px;
   height: 350px;
+
+  /* overflow: hidden; */
+}
+
+div#shuttleFrame{
+  width: 780px;
+  height: 350px;
+  border: 3px solid #f00;
+}
+
+div#slide a{
+  position: absolute;
+  display: inline-block;
+  width: 780px;
+  height: 350px;
+}
+
+#slide a:not(:first-child){
+  display: none;
+}
+
+div#slide span{
+  font-size: 20px;
+  font-weight: bold;
+
+  padding: 10px 30px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
 /* div#slide 끝 */
@@ -171,13 +207,76 @@ div#contents {
 }
 
 #main #contents > * {
-  flex: 1;
   border: 1px solid #000;
+  padding: 20px 4px;
 }
+
+/* div#bbsNotice */
+#main #bbsNotice {
+  width: 310px;
+}
+/* div#bbsNotice */
+
+/* div#bbsGallery */
+#main #bbsGallery {
+  width: 320px;
+}
+/* div#bbsGallery */
+
+#main button{
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 2px 10px;
+  border: 1px solid #aaa;
+  position: relative;
+  top: 1px;
+  left: 20px;
+}
+
+#main button #bbsNotice button{
+  background-color: #fff;
+  border-bottom-color: #fff;
+}
+
+#main div.tabContents {
+  border: 1px solid #aaa;
+}
+
+#main #bbsGallery table{
+  margin: 0 auto;
+}
+
+#main #bbsNotice table td{
+  font-size: 15px;
+  line-height: 21px;
+}
+
+#main #bbsNotice table td:first-child{
+  padding-right: 23px;
+}
+
+/* div#banner */
+
+#main #banner {
+    width: 160px;
+  }
+  
+  #main #banner a{
+    height: 140px;
+    line-height: 140px;    
+    padding: 0 ;
+}
+
+
+/* div#banner */
+
+/* footer#footer 시작 */
 
 #main footer#footer {
   height: 100px;
 }
 
+/* footer#footer 끝 */
 /* div#contents 끝 */
 /* main#main 끝 */

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <script src="lib/jquery-1.12.3.txt"></script>
     <script src="script/script.js"></script>
 </head>
+
 <body>
     <div id="wrap" class="flexContainer">
         <header id="header">
@@ -52,19 +54,77 @@
                 </ul>
             </nav> <!-- nav#gnb -->
         </header>
-        
+
         <!-- header#header -->
 
         <main id="main">
             <div id="slide">
-
+                <div id="shuttleFrame">
+                    <a href="#">
+                        <img src="images/slide1.jpg" alt="슬라이드이미지01">
+                        <span>떠나요! 남도맛축제!</span>
+                    </a>
+                    <a href="#">
+                        <img src="images/slide2.jpg" alt="슬라이드이미지02">
+                        <span>메타세콰이어길을 걸어요!</span>
+                    </a>
+                    <a href="#">
+                        <img src="images/slide3.jpg" alt="슬라이드이미지03">
+                        <span>테마기행과 함께 즐겨요!</span>
+                    </a>
+                </div>
+                <!-- div#shuttleFrame -->
             </div>
             <!-- div#slide -->
 
             <div id="contents" class="flexContainer">
-                <div></div>
-                <div></div>
-                <div></div>
+                <div id="bbsNotice">
+                    <button type="button">공지사항</button>
+                    <div class="tabContents">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><a href="#">맛집 베스트 사진 선정</a></td>
+                                    <td><a href="#">2020.03.14</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">남도맛집기행 도장깨기</a></td>
+                                    <td><a href="#">2020.03.14</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">메타세콰이어길 축제오픈</a></td>
+                                    <td><a href="#">2019.04.12</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">여수 아쿠아리움에서 온천을</a></td>
+                                    <td><a href="#">2019.03.05</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- div#tabContents -->
+                </div>
+                <!-- div#bbsNotice 310px -->
+                <div id="bbsGallery">
+                    <button type="button">갤러리</button>
+                    <div class="tabContents">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><a href="#"><img src="images/gallery01.jpg" width="90" alt=""></a></td>
+                                    <td><a href="#"><img src="images/gallery02.jpg" width="90" alt=""></a></td>
+                                    <td><a href="#"><img src="images/gallery03.jpg" width="90" alt=""></a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- div#tabContents -->
+                </div>
+                <!-- div#bbsGallery 320px -->
+                <div id="banner">
+                    <a href="#"><img src="images/banner.jpg" alt="배너이미지"></a>
+                </div>
+                <!-- div#banner 150px -->
 
             </div>
             <!-- div#contents -->
@@ -91,4 +151,5 @@
     <!-- div#layerBG -->
     <!-- 레이어 팝업 끝 -->
 </body>
+
 </html>
