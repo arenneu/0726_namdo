@@ -53,14 +53,29 @@ $(function () {
 
     // 교차전환형 시작
     function fnSlide() {
-        $("#slide a").eq(0).fadeOut(500,
-            function () {
-                $(this).insertAfter("slide a:last-child");
+        $("#slide a").eq(0).fadeOut(
+            500,
+            function(){
+                $(this).insertAfter("#slide a:last-child");        
             }
-        );
-        $("#slide a").eq(1).fadeIn(1000);
+            );
+        $("#slide a").eq(1).fadeIn(1000)
     }
 
+    
+
     // 교차전환형 끝
+
+    // 레이어팝업 시작
+    $("tr#popPoint").click(function(){
+        $("div#layerBG").css("display","block");
+    });
+    $("div#closeBtnArea>button").click(function(){
+        $("div#layerBG").css("display","none");
+    });
+
+    
+
+    // 레이어팝업 끝
 
 });
